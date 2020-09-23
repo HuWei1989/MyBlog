@@ -4,6 +4,7 @@ import re
 import json
 import copy
 import string
+import random
 class BlogHtml:
     catePath=""
     configObj=None
@@ -29,6 +30,8 @@ class BlogHtml:
             indexHtml=indexHtml.replace('{-{config.path}-}',self.configObj['path'])
             indexHtml=indexHtml.replace('{-{config.title}-}',self.configObj['title'])
             indexHtml=indexHtml.replace('{-{config.author}-}',self.configObj['author'])
+            #页面刷新随机数
+            indexHtml=indexHtml.replace('{-{config.random}-}',str(random.randint(0,1000*1000*1000)))
             # print(indexHtml)
         with open('../model/index-item-model.html','r', encoding='UTF-8') as f:
             itemHtml=f.read()
