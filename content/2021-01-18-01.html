@@ -1,0 +1,49 @@
+<div class="padding-tb-10 line-height">
+    FFmpeg的代码
+    <br>
+    <code class="Bash">
+        git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+    </code>
+    <br>
+    X264
+    <br>
+    <code class="Bash">
+        git clone https://code.videolan.org/videolan/x264.git
+    </code>
+    <br>
+    X265
+    <br>
+    <code class="Bash">
+        git clone https://github.com/videolan/x265.git
+    </code>
+    <br>
+    1.安装X264
+    <br>
+    <img src="../img/2021-01-18-01.png"  style="width:592px;height:73px;float:center;"/>
+    <br>
+    不能简单的运行sudo apt-get install nasm,通过官方下载安装https://www.nasm.us/pub/nasm/releasebuilds/2.14.01/nasm-2.14.01.tar.gz，
+    <br>
+    <pre><code class="Bash">
+        tar xvf  nasm-2.13.03.tar.gz
+        ./configure
+        make -j4
+        make install
+    </code></pre>
+    <br>
+    2.安装X265
+    <br>
+    <pre><code class="Bash">
+        cmake CMakeLists.txt
+        make -j4
+        make install
+    </code></pre>
+    <br>
+    3.下载Android NDK
+    <br>
+    <code class="Bash">
+        wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip
+        unzip android-ndk-r21d-linux-x86_64.zip
+    </code>
+    
+</div>
+<script>hljs.initHighlightingOnLoad();</script>
