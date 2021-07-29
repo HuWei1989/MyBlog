@@ -19,6 +19,7 @@
         {"date":"2019-09-28","title":"阿里云Ubuntu问题","mode":"index-model","tag":4,"path":"../","encrypt":true,"page":"2019-09-28-01.html","isCreate":true},
         {"date":"2020-10-13","title":"AS的startService无法启动Service","mode":"index-model","tag":0,"path":"../","encrypt":true,"page":"2020-10-13-01.html","isCreate":true},
         {"date":"2020-10-22","title":"Ubuntu编译VLC代码","mode":"index-model","tag":2,"path":"../","encrypt":true,"page":"2020-10-22-01.html","isCreate":true},
-        {"date":"2021-01-18","title":"交叉编译FFmpeg+x264+265(1)","mode":"index-model","tag":2,"path":"../","encrypt":true,"page":"2021-01-18-01.html","isCreate":true}
+        {"date":"2021-01-18","title":"交叉编译FFmpeg+x264+265(1)","mode":"index-model","tag":2,"path":"../","encrypt":true,"page":"2021-01-18-01.html","isCreate":true},
+        {"date":"2021-04-22","title":"MicroChat(1)","mode":"index-model","tag":2,"path":"../","encrypt":true,"page":"2021-04-22-01.html","isCreate":true}
     ]
 }

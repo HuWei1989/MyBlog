@@ -1,6 +1,6 @@
 <html>
         <head>
-            <title>交叉编译FFmpeg+x264+265(1)</title>
+            <title>MicroChat(1)</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -31,55 +31,52 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 col-xs-12 list-page-actile">
-                            <h1>交叉编译FFmpeg+x264+265(1)</h1>
-                            <div class="page-write-time">2021-01-18</div>
+                            <h1>MicroChat(1)</h1>
+                            <div class="page-write-time">2021-04-22</div>
                             <div class="page-write-content"><div class="padding-tb-10 line-height">
-    FFmpeg的代码
-    <br>
-    <code class="Bash">
-        git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
-    </code>
-    <br>
-    X264
-    <br>
-    <code class="Bash">
-        git clone https://code.videolan.org/videolan/x264.git
-    </code>
-    <br>
-    X265
-    <br>
-    <code class="Bash">
-        git clone https://github.com/videolan/x265.git
-    </code>
-    <br>
-    1.安装X264
-    <br>
-    <img src="../img/2021-01-18-01.png"  style="width:592px;height:73px;float:center;"/>
-    <br>
-    不能简单的运行sudo apt-get install nasm,通过官方下载安装https://www.nasm.us/pub/nasm/releasebuilds/2.14.01/nasm-2.14.01.tar.gz，
+    服务器安装Mysql
     <br>
     <pre><code class="Bash">
-        tar xvf  nasm-2.13.03.tar.gz
-        ./configure
-        make -j4
-        make install
+        apt install mysql-server
     </code></pre>
     <br>
-    2.安装X265
+    可能出现找不要源，添加阿里源
+    <br>
+    <img src="../img/2021-04-22-01.png"  style="width:863px;height:538px;float:center;"/>
+    <br>
+    添加阿里源
+    <pre><code class="Bash">
+        cd /etc/apt/
+        sudo cp sources.list sources.list.bak
+        sudo vim sources.list
+    </code></pre>
     <br>
     <pre><code class="Bash">
-        cmake CMakeLists.txt
-        make -j4
-        make install
-    </code></pre>
-    <br>
-    3.下载Android NDK
-    <br>
-    <code class="Bash">
-        wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip
-        unzip android-ndk-r21d-linux-x86_64.zip
-    </code>
-    
+        #添加阿里源
+        deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+        deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+        deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+        deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+        deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+        deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+        deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+        deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+        deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+        deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+        </code></pre>
+    最后执行如下命令更新源
+    <pre><code class="Bash">
+        sudo apt-get update
+        sudo apt-get upgrade
+        # 查看有没有安装MySQL：
+
+        dpkg -l | grep mysql
+
+        # 安装MySQL：
+
+        apt install mysql-server
+        </code>
+    </pre>
 </div>
 <script>hljs.initHighlightingOnLoad();</script></div>
                             
